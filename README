@@ -1,0 +1,29 @@
+This is an assembly language simulator implemented in C. It accurately simulates the hardware interactions executed by several assembly instructions. This simulator supports assembly
+language functionality of the following:
+
+lsl, lsr, orr, eor, mvn
+mov, ldr, str
+cmp, b, bl, b.ne, b.eq, b.lt, b.gt, b.le, b.ge
+nop, clz, cls
+
+Additionally, the simulator produces an output to model the main memory, registers, sp, and pc of the system after the execution of each assembly instruction.
+
+
+
+Running the simulator
+
+Compile the code using the command:
+
+make
+
+
+To simulate the execution of assembly instructions and display the system state, run the command:
+
+./simulator CODE_FILEPATH PC SP
+
+
+replacing CODE_FILEPATH with the path to a file containing output from objdump, PC with the initial value of the program counter, and SP with the initial value of the stack pointer.
+
+For example, to run the simulator with the code in examples/initvars.txt, run the command:
+
+./simulator examples/initvars.txt 0x71c 0xFFF0

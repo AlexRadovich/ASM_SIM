@@ -1,0 +1,15 @@
+0000000000000714 <conditional>:
+ 714:	d10043ff 	sub	sp, sp, #0x10
+ 718:	52800100 	mov	w0, #0x8
+ 71c:	b9000fe0 	str	w0, [sp, #12]
+ 720:	b9400fe0 	ldr	w0, [sp, #12]
+ 724:	7100001f 	cmp	w0, #0x0
+ 728:	54000081 	b.ne	738 <conditional+0x24>
+ 72c:	528000e0 	mov	w0, #0x7
+ 730:	b9000fe0 	str	w0, [sp, #12]
+ 734:	14000003 	b	740 <conditional+0x2c>
+ 738:	528000c0 	mov	w0, #0x6
+ 73c:	b9000fe0 	str	w0, [sp, #12]
+ 740:	d503201f 	nop
+ 744:	910043ff 	add	sp, sp, #0x10
+ 748:	d65f03c0 	ret

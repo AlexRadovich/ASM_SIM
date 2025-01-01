@@ -1,0 +1,26 @@
+0000000000400544 <callee>:
+  400544:	d10043ff 	sub	sp, sp, #0x10
+  400548:	b9000fe0 	str	w0, [sp, #12]
+  40054c:	b9000be1 	str	w1, [sp, #8]
+  400550:	b9400fe8 	ldr	w8, [sp, #12]
+  400554:	b9400be9 	ldr	w9, [sp, #8]
+  400558:	0b090108 	add	w8, w8, w9
+  40055c:	b90007e8 	str	w8, [sp, #4]
+  400560:	b94007e0 	ldr	w0, [sp, #4]
+  400564:	910043ff 	add	sp, sp, #0x10
+  400568:	d65f03c0 	ret
+
+000000000040056c <caller>:
+  40056c:	d10083ff 	sub	sp, sp, #0x20
+  400570:	f9000bfe 	str	x30, [sp, #16]
+  400574:	52800668 	mov	w8, #0x33
+  400578:	52800889 	mov	w9, #0x44
+  40057c:	b9000fe8 	str	w8, [sp, #12]
+  400580:	b9000be9 	str	w9, [sp, #8]
+  400584:	b9400fe0 	ldr	w0, [sp, #12]
+  400588:	b9400be1 	ldr	w1, [sp, #8]
+  40058c:	97ffffee 	bl	400544 <callee>
+  400590:	b90007e0 	str	w0, [sp, #4]
+  400594:	f9400bfe 	ldr	x30, [sp, #16]
+  400598:	910083ff 	add	sp, sp, #0x20
+  40059c:	d65f03c0 	ret

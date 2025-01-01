@@ -1,0 +1,9 @@
+000000000000071c <initvars>:
+ 71c:	d10043ff 	sub	sp, sp, #0x10
+ 720:	52800aa0 	mov	w0, #0x55
+ 724:	b90007e0 	str	w0, [sp, #4]
+ 728:	d28eeee0 	mov	x0, #0x7777
+ 72c:	f90007e0 	str	x0, [sp, #8]
+ 730:	d503201f 	nop
+ 734:	910043ff 	add	sp, sp, #0x10
+ 738:	d65f03c0 	ret
